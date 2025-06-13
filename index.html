@@ -14,6 +14,10 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
   <body class="scroll">
+    <!-- Burbuja flotante de WhatsApp -->
+    <a href="https://wa.me/+528143403941" target="_blank" class="whatsapp-burbuja" aria-label="Chatear por WhatsApp">
+      <img src="./assets/images/logos/whatsapp-icon.svg" alt="WhatsApp" />
+    </a>
     <header class="encabezado">
       <nav class="navegacion">
         <a class="navegacion__enlace" href="#presentacion">
@@ -33,319 +37,204 @@
       </nav>
     </header>
     <main class="principal">
-      <section class="presentacion" id="presentacion">
-        <div class="presentacion__contenedor_info">
-          <h1 class="presentacion__titulo">Soy Lopez Vega
-            Belquis Marisol Desarrolladora Web</h1>
-          <p class="presentacion__parrafo">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          </p>
+        <section class="presentacion" id="presentacion">
+          <!-- Marco con nombre, apellido y "Portafolio" -->
+          <div class="marco">
+            <span class="lado izquierdo">Belquis Marisol</span>
+            <span class="centro">Portafolio</span>
+            <span class="lado derecho">Lopez Vega</span>
+          </div>
+
+          <!-- Botones fuera del marco -->
           <div class="presentacion__contenedor_botones">
             <a href="#sobre-mi" class="boton" role="button">Sobre mí</a>
-            <a
-              href="./assets/docs/cv.pdf"
-              target="_blank"
-              class="boton boton_oscuro"
-              role="button"
-              >Descargar CV</a
-            >
+            <a href="./assets/docs/cv.pdf" target="_blank" class="boton boton_oscuro" role="button">Descargar CV</a>
+          </div>
+        </section>
+      <article class="perfil" id="sobre-mi">
+        <div class="perfil__contenedor">
+          
+          <!-- Marco redondo con imagen -->
+          <div class="perfil__imagen">
+            <img src="./assets/images/profile/trabajo2.jpg" alt="Foto de perfil" />
+          </div>
+
+          <!-- Contenido de texto y contacto -->
+          <div class="perfil__contenido">
+            <h2 class="perfil__titulo">Sobre mí</h2>
+            <p class="perfil__descripcion">
+              ESTUDIE DISEÑO GRAFICO EN LA UNIVERSIDAD Y MEDIENTE
+              CURSOS ONLINE, SIEMPRE ESTUVE INVOLUCRADA EN EL
+              MUNDO DEL DISEÑO MEDIANTE DIFERENTES ACTIVIDADES.
+              DURANTE AÑOS TRABAJE COMO PROFESORA DE
+              EDUCACION FISICA AYUDANDO CON DISEÑO DE
+              FLAYERS PARA DIFERENTES PROYECTOS EDUCATIVOS.
+              MI OBJETIVO ES SEGUIR CRECIENDO EN ESTE AMBITO
+              DE CREATIVIDAD.
+            </p>
+            <div class="perfil__contacto">
+              <div class="contacto__item">
+                <img src="./assets/images/logos/phone-call_455705.png" alt="Teléfono" />
+                <span>+528143403941</span>
+              </div>
+              <div class="contacto__item">
+                <img src="./assets/images/logos/gmail_732200.png" alt="Gmail" />
+                <span>sollopezvega@gmail.com</span>
+              </div>
+              <div class="contacto__item">
+                <img src="./assets/images/logos/map_5503640.png" alt="Ubicación" />
+                <span>Playa del Carmen-MX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="presentacion" >
+        <div class="marco">
+          <!-- Columna izquierda: hoja con texto -->
+          <div class="marco__columna hoja">
+            <h1>APTITUDES</h1>
+            <h1>Responsabilidad</h1>
+            <h1>Creatividad</h1>
+            <h1>Trabajo en equipo</h1>
+          </div>
+
+          <!-- Columna derecha: título + logos -->
+          <div class="marco__columna contenido">
+            <h2 class="contenido__titulo">Softwares</h2>
+            <div class="contenido__logos">
+              <img src="./assets/images/logos/ai.jfif" alt="HTML5" />
+              <img src="./assets/images/logos/canva-icon.png" alt="CSS3" />
+              <img src="./assets/images/logos/capcut-icon.png" alt="JavaScript" />
+              <img src="./assets/images/logos/filmora_logo.png" alt="React" />
+              <img src="./assets/images/logos/Photoshop.jfif" alt="Figma" />
+            </div>
           </div>
         </div>
       </section>
-      <article class="articulo sobre_mi" id="sobre-mi">
-        <h2 class="articulo__titulo">Un poco sobre mi</h2>
-        <div class="articulo__contenedor_descripciones">
-          <section class="seccion_descripcion">
-            <div class="seccion_descripcion__porta_retrato">
-              <img
-                class="seccion_descripcion__imagen"
-                src="./assets/images/profile/trabajo2.jpg"
-                alt="foto trabajando en la oficina"
-                title="trabajando en la oficina"
-              />
-            </div>
-            <div
-              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
-              aria-label="descripcion personal"
-            >
-              <h3 class="seccion_descripcion__titulo" id="mi_historia_titulo">
-                Mi historia
-              </h3>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mi historia"
-                aria-describedby="mi_historia_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mi historia"
-                aria-describedby="mi_historia_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mi historia"
-                aria-describedby="mi_historia_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mi historia"
-                aria-describedby="mi_historia_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis. Lorem ipsum
-                dolor sit, amet consectetur adipisicing elit. Molestiae dolorem
-                quasi atque deserunt odio, minima saepe delectus nemo
-                praesentium sapiente labore excepturi quos repellat non,
-                officiis, ea vero commodi reiciendis. Lorem ipsum dolor sit,
-                amet consectetur adipisicing elit. Molestiae dolorem quasi atque
-                deserunt odio, minima saepe delectus nemo praesentium sapiente
-                labore excepturi quos repellat non, officiis, ea vero commodi
-                reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-            </div>
-          </section>
-          <section class="seccion_descripcion">
-            <div
-              class="seccion_descripcion__info scroll scroll_fino scroll_gris"
-              aria-label="descripcion personal"
-            >
-              <h3 class="seccion_descripcion__titulo" id="mis_hobbies_titulo">
-                Mis hobbies
-              </h3>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mis hobbies"
-                aria-describedby="mis_hobbies_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mis hobbies"
-                aria-describedby="mis_hobbies_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis. Lorem ipsum
-                dolor sit, amet consectetur adipisicing elit. Molestiae dolorem
-                quasi atque deserunt odio, minima saepe delectus nemo
-                praesentium sapiente labore excepturi quos repellat non,
-                officiis, ea vero commodi reiciendis. Lorem ipsum dolor sit,
-                amet consectetur adipisicing elit. Molestiae dolorem quasi atque
-                deserunt odio, minima saepe delectus nemo praesentium sapiente
-                labore excepturi quos repellat non, officiis, ea vero commodi
-                reiciendis.
-              </p>
-              <p
-                class="seccion_descripcion__parrafo"
-                aria-label="Detalles de mis hobbies"
-                aria-describedby="mis_hobbies_titulo"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Molestiae dolorem quasi atque deserunt odio, minima saepe
-                delectus nemo praesentium sapiente labore excepturi quos
-                repellat non, officiis, ea vero commodi reiciendis.
-              </p>
-            </div>
-            <div class="seccion_descripcion__porta_retrato">
-              <img
-                class="seccion_descripcion__imagen seccion_descripcion__imagen_variante"
-                src="./assets/images/profile/trabajo3.jpg"
-                alt="foto mientras me encontraba en una reunion de trabajo"
-                title="selfie en una reunion"
-              />
-            </div>
-          </section>
-        </div>
-      </article>
+      <section class="seccion-puntos">
+        <h2 class="seccion-puntos__titulo">Mi Trayectoria Profesional</h2>
+        <ul class="seccion-puntos__lista">
+          <li>
+            <strong>EMPRESA:</strong> MINISTERIO DE EDUCACION, CIENCIA Y TECNOLOGIA.<br>
+            <strong>PUESTO:</strong> ADMINISTRATIVA Y PROFESORA. 2 AÑOS.
+          </li>
+          <li>
+            <strong>EMPRESA:</strong> EMPRESA PIDO GANCHO.<br>
+            <strong>PUESTO:</strong> ENCARGADA Y PROFESORA. 1 AÑO<br>
+            <strong>DESCRIPCIÓN:</strong> GESTIÓN DE INSCRIPCIONES, PAGOS Y COORDINACIÓN DE FORMA PRESENCIAL Y VIRTUAL.
+          </li>
+          <li>
+            <strong>EMPRESA:</strong> FUNDACIÓN DESOCHA.<br>
+            <strong>PUESTO:</strong> PROFESORA Y COORDINADORA DE LA ÁREA DE NATACIÓN. 5 AÑOS.<br>
+            <strong>DESCRIPCIÓN:</strong> PROFESORA Y COORDINADORA, PARA RECLUTAR NADADORES PARA COMPETENCIAS NACIONALES.
+            COORDINACIÓN MEDIANTE REDES SOCIALES Y MENSAJES CON LOS PADRES.
+          </li>
+          <li>
+            <strong>EMPRESA:</strong> CENTRO DE EDUCACIÓN DEPORTIVA.<br>
+            <strong>PUESTO:</strong> ADMINISTRATIVA Y PROFESORA. 1 AÑO<br>
+            <strong>DESCRIPCIÓN:</strong> ENCARGADA DE ALTAS Y BAJAS DEL PERSONAL, ENVÍO DE CORREOS ELECTRÓNICOS, ASISTENCIA VIRTUAL, COORDINACIÓN Y PROMOCIÓN EN REDES SOCIALES SOBRE LAS DISCIPLINAS.
+          </li>
+          <li>
+            <strong>EMPRESA:</strong> INDEPENDIENTE – DEPORTIVO TENIS<br>
+            <strong>DESCRIPCIÓN:</strong> CREACIÓN DE PROMOCIONES Y FLYERS SOBRE EL DEPORTE.
+          </li>
+          <li>
+            <strong>EMPRESA:</strong> INDEPENDIENTE – DE COMIDA<br>
+            <strong>DESCRIPCIÓN:</strong> CREACIÓN DE PROMOCIONES Y FLYERS SOBRE COMIDA.
+          </li>
+        </ul>
+      </section>
+      <section class="formacion">
+        <h2 class="formacion__titulo">Formación</h2>
+        <ul class="formacion__lista">
+          <li><span class="formacion__icono">➤</span> <strong>DISEÑO GRÁFICO</strong> – UNNE – Un año de cursado</li>
+          <li><span class="formacion__icono">➤</span> <strong>Curso de Gestión de Redes de Emprendimientos</strong></li>
+          <li><span class="formacion__icono">➤</span> <strong>Curso de Diseño para Emprendimientos</strong></li>
+          <li><span class="formacion__icono">➤</span> <strong>Curso de Edición de Videos para Emprendimientos</strong></li>
+          <li><span class="formacion__icono">➤</span> <strong>Curso de Desarrollo</strong></li>
+        </ul>
+      </section>
       <article class="articulo proyectos" id="proyectos">
         <h2 class="articulo__titulo">Mis proyectos</h2>
         <div class="contenedor_tarjetas_grid">
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 1">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/Página de Agencia Creativa.png"
+              src="./assets/images/proyectos/proyecto_1.jpeg"
               alt="imagen del proyecto"
               title="Página de Agencia Creativa"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_1">Página de Agencia Creativa</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_1"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton boton_oscuro" target="_blank"
-                >Ver proyecto</a
-              >
-            </div>
           </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 2">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/bienesraices.png"
+              src="./assets/images/proyectos/proyecto_2.jpeg"
               alt="imagen del proyecto"
-              title="proyecto 2"
+              title="Bienes Raíces"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_2">Bienes Raices</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_2"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton" target="_blank">Ver proyecto</a>
-            </div>
           </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 3">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/administrador_pacientes_veterinaria.png"
+              src="./assets/images/proyectos/proyecto_3.jpeg"
               alt="imagen del proyecto"
-              title="proyecto 3"
+              title="Administrador de Pacientes"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_3">Administrador de Pacientes de Veterinaria</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_3"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton boton_oscuro" target="_blank"
-                >Ver proyecto</a
-              >
-            </div>
           </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 4">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/blog.png"
+              src="./assets/images/proyectos/proyecto_4.jpeg"
               alt="imagen del proyecto"
-              title="proyecto 4"
+              title="Blog"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_4">Blog</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_4"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton" target="_blank">Ver proyecto</a>
-            </div>
           </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 5">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/menu.png"
+              src="./assets/images/proyectos/proyecto_5.jpeg"
               alt="imagen del proyecto"
-              title="proyecto 5"
+              title="Restaurant App"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_5">Restaurant App</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_5"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton boton_oscuro" target="_blank"
-                >Ver proyecto</a
-              >
-            </div>
           </article>
-          <article
-            class="tarjeta"
-            aria-label="presentacion de proyecto personal"
-          >
+          <article class="tarjeta" aria-label="proyecto 6">
             <img
               class="tarjeta__imagen"
-              src="./assets/images/proyectos/citas.png"
+              src="./assets/images/proyectos/proyecto_6.jpeg"
               alt="imagen del proyecto"
-              title="proyecto 6"
+              title="Administración de Citas"
             />
-            <div class="tarjeta__contenido">
-              <h3 class="tarjeta__titulo" id="titulo_proyecto_6">Administración de Citas para Salón de Bellaza</h3>
-              <span class="tarjeta__divisor"></span>
-              <p
-                class="tarjeta__parrafo scroll scroll_fino scroll_gris"
-                aria-label="descripcion de proyecto personal"
-                aria-describedby="titulo_proyecto_6"
-              >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Inventore necessitatibus doloribus adipisci dolorum cum et
-                quisquam dicta veniam accusamus dignissimos. Placeat eligendi
-                nihil voluptates eos enim aperiam porro architecto et?
-              </p>
-              <a href="#" class="boton" target="_blank">Ver proyecto</a>
-            </div>
+          </article>
+                    <article class="tarjeta" aria-label="proyecto 6">
+            <img
+              class="tarjeta__imagen"
+              src="./assets/images/proyectos/proyecto_7.jpeg"
+              alt="imagen del proyecto"
+              title="Administración de Citas"
+            />
+          </article>
+          <article class="tarjeta" aria-label="video de proyecto">
+            <video
+              class="tarjeta__video"
+              src="./assets/images/proyectos/proyecto_8.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              title="Demo de proyecto"
+            ></video>
+          </article>
+                    <article class="tarjeta" aria-label="video de proyecto">
+            <video
+              class="tarjeta__video"
+              src="./assets/images/proyectos/proyecto_9.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              title="Demo de proyecto"
+            ></video>
           </article>
         </div>
       </article>

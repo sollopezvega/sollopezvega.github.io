@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --texto-primario: #dddddd;
+  --texto-primario: #7f8c8d;
   --texto-secundario: #d1d1d1;
   --fondo-primario: #0f0921;
   --fondo-primario-transparente: #0f092180;
@@ -37,11 +37,23 @@
 }
 
 html {
-  background-color: var(--fondo-primario);
+    background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.7) 0%, transparent 50%),
+    radial-gradient(circle at 80% 40%, rgba(135, 206, 250, 0.7) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.9) 0%, transparent 60%),
+    white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 body {
-  min-height: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
 }
 
 /* encabezado */
@@ -68,14 +80,252 @@ body {
 
 /* principal */
 .principal {
-  background-color: var(--fondo-primario);
+  background-color: transparent;
 }
+.marco {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  width: 70vw;
+  height: 70vh;
+
+  border: 2px solid black;
+  padding: 1rem; /* o menos si quieres más cerca aún de los bordes */
+
+  box-sizing: border-box;
+  background-color: transparent;
+  text-align: center;
+  gap: 1rem; /* opcional: reduce el espacio entre elementos si hace falta */
+  margin: 0; /* elimina márgenes externos */
+  
+}
+
+
+/* Columna base */
+.marco__columna {
+  flex: 1;
+}
+
+/* Columna izquierda: hoja de cuaderno */
+.hoja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fff,
+    #fff 28px,
+    #dbe4ea 29px,
+    #fff 30px
+  );
+  background-size: 100% 30px;
+  padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 5vw, 3rem);
+  border-left: 4px solid #e74c3c;
+  border-right: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  box-shadow: inset 0 0 0 1px #e0e0e0;
+  clip-path: polygon(
+    0% 0%, 98% 0%, 100% 5%, 98% 10%, 100% 15%, 98% 20%, 100% 25%,
+    98% 30%, 100% 35%, 98% 40%, 100% 45%, 98% 50%, 100% 55%, 98% 60%,
+    100% 65%, 98% 70%, 100% 75%, 98% 80%, 100% 85%, 98% 90%, 100% 95%,
+    98% 100%, 0% 100%
+  );
+  box-sizing: border-box;
+}
+
+/* Columna derecha: título y logos */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contenido__logos img {
+  width: clamp(80px, 10vw, 120px);
+}
+.contenido__titulo {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contenido__logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contenido__logos img {
+  width: clamp(40px, 8vw, 60px);
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.contenido__logos img:hover {
+  transform: scale(1.1);
+}
+
+.marco .centro {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  font-size: clamp(2rem, 10vw, 8rem); /* Se adapta entre 2rem y 8rem según ancho de pantalla */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #111;
+  background: white;
+  padding: 0 1rem;
+  animation: mover 3s infinite alternate;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.marco .lado {
+  position: absolute;
+  top: 40%; /* Más arriba */
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem; /* Bordes redondeados */
+  border: 2px solid black; /* Si quieres que también tengan borde como el marco */
+}
+
+.marco .izquierdo {
+  left: -7.5rem;
+}
+
+.marco .derecho {
+  right: -6rem;
+}
+
+/* Animación del texto "Portafolio" */
+@keyframes mover {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1) rotate(2deg); color: #e91e63; }
+  100% { transform: translateX(-50%) scale(1); }
+}
+.seccion-puntos {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.seccion-puntos__titulo {
+  font-size: clamp(2.5rem, 6vw, 3rem); /* Más grande */
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.seccion-puntos__lista {
+  list-style: disc;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem); /* Más grande */
+  line-height: 1.9;
+  color: #333;
+}
+
+.seccion-puntos__lista li {
+  margin-bottom: 1.5rem;
+}
+
+/* Cambiar color del punto a rosa */
+.seccion-puntos__lista li::marker {
+  color: #ff69b4;
+}
+
+.formacion {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.formacion__titulo {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.formacion__titulo::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #2c3e50;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.formacion__lista {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  line-height: 1.8;
+  color: #333;
+}
+
+.formacion__lista li {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.formacion__icono {
+  color: #ff69b4;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
 
 /* presentacion */
 .presentacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
   height: 100vh;
-  background-image: url("./assets/images/profile/hero-tema-oscuro.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -95,12 +345,11 @@ body {
   );
 }
 .presentacion__contenedor_botones {
-  width: 420px;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 2rem; /* espacio entre marco y botones */
 }
-
 .presentacion__titulo {
   font-size: var(--presentacion-titulo-tamanio);
   color: var(--color-primario);
@@ -117,8 +366,8 @@ body {
 
 /* articulo */
 .articulo {
+  min-height: 100vh;
   width: 100%;
-  height: 100vh;
   padding: 2rem 10rem;
   display: flex;
   flex-direction: column;
@@ -127,21 +376,10 @@ body {
   gap: 1rem;
 }
 .sobre_mi {
-  background: linear-gradient(
-    180deg,
-    rgb(15 8 16) 0%,
-    var(--fondo-primario) 10%,
-    var(--color-primario-apagado) 75%,
-    var(--color-primario) 90%
-  );
+  background-color: transparent;
 }
 .proyectos {
-  background: linear-gradient(
-    180deg,
-    var(--color-primario) 0%,
-    var(--color-primario-apagado) 10%,
-    var(--fondo-primario) 55%
-  );
+  background-color: transparent;
 }
 
 .articulo__titulo {
@@ -183,6 +421,7 @@ body {
   padding-bottom: 50px;
   background-color: var(--texto-primario);
   position: absolute;
+  z-index: 10;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -245,12 +484,9 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
-  background-color: var(--fondo-primario);
-  background: linear-gradient(
-    180deg,
-    var(--fondo-primario) 0%,
-    var(--fondo-secundario) 100%
-  );
+  position: relative;
+  z-index: 20;
+  background-color: transparent;
   border-top: 1px solid var(--texto-secundario);
 }
 .pie_de_pagina__columna {
@@ -371,7 +607,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 0 2rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -419,6 +655,19 @@ body {
 .tarjeta:focus > .tarjeta__contenido {
   opacity: 1;
 }
+
+.tarjeta__video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in;
+  display: block;
+}
+.tarjeta:hover > .tarjeta__video,
+.tarjeta:focus > .tarjeta__video {
+  transform: scale(1.2);
+}
+
 
 /* scroll */
 .scroll {
@@ -574,3 +823,91 @@ body {
   }
 }
 
+.perfil {
+  max-width: 1500px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil__contenedor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Imagen redonda con borde negro */
+.perfil__imagen img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+/* Contenido de texto */
+.perfil__contenido {
+  flex: 1;
+  min-width: 250px;
+}
+
+.perfil__titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.perfil__descripcion {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Contacto con iconos */
+.perfil__contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contacto__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contacto__item img {
+  width: 20px;
+  height: 20px;
+}
+
+.whatsapp-burbuja {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-burbuja:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-burbuja img {
+  width: 32px;
+  height: 32px;
+}
